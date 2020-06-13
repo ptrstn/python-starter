@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/ptrstn/python-starter.svg?branch=master)](https://travis-ci.com/ptrstn/python-starter)
 [![codecov](https://codecov.io/gh/ptrstn/python-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/ptrstn/python-starter)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 # python-starter
 
