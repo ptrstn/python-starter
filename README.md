@@ -17,7 +17,7 @@ Copy these files into your personal project and replace all occurrences of ```pa
 ```bash
 NEW_PROJECT_NAME=<YOUR_PACKAGE_NAME>
 mv packagename $NEW_PROJECT_NAME
-sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py 
+sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py .travis.yml
 ```
 
 ### Adjust license

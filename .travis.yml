@@ -11,6 +11,7 @@ install:
 
 script:
   - pytest --cov .
+  - packagename
 
 after_success:
   - codecov
