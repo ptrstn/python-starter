@@ -54,8 +54,8 @@ packagename
 ## Development
 
 ```bash
-git clone https://github.com/ptrstn/packagename
-cd packagename
+git clone https://github.com/ptrstn/python-starter
+cd python-starter
 pip install -e .
 pip install -r testing-requirements.txt
 ```
