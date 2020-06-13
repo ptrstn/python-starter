@@ -38,16 +38,6 @@ In particular, change the following entries:
 - Travis CI badge url
 - codecov badge url
 
-### Test changes
-
-Follow the development instructions and run the tests to ensure that everything is running properly.
-
-```bash
-pip install -e .
-pip install -r testing-requirements.txt
-pytest
-```
-
 ## Installation
 
 ```bash
