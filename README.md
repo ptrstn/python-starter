@@ -10,9 +10,22 @@ This project is released into the public domain, so feel free to modify and use 
 
 ## Usage
 
+### Copy files into your new project
+
+Copy all files from this repository into your personal project. 
+
+```bash
+git clone https://github.com/ptrstn/python-starter.git tmp
+rm -rf tmp/.git
+cp -r tmp/.coveragerc tmp/.gitignore tmp/.travis.yml tmp/* .
+rm -rf tmp
+```
+
+**Note**: If your project is not empty, it might overwrite your files.
+
 ### Adjust package name
 
-Copy these files into your personal project and replace all occurrences of ```packagename``` with your package name.
+Replace all occurrences of ```packagename``` with your package name.
 
 ```bash
 NEW_PROJECT_NAME=<YOUR_PACKAGE_NAME>
