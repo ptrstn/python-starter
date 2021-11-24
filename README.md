@@ -28,8 +28,15 @@ rm -rf tmp
 
 Replace all occurrences of ```packagename``` and ```python-starter``` with your package name.
 
+You can do this for instance by first declaring a variable ```NEW_PROJECT_NAME``` and replacing ```<YOUR_PACKAGE_NAME>``` with your desired package/project name.
+
 ```bash
 NEW_PROJECT_NAME=<YOUR_PACKAGE_NAME>
+```
+
+You can then use this variable to rename all occurrences in the template with your desired package/project name.
+
+```bash
 mv packagename $NEW_PROJECT_NAME
 sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py .travis.yml
 sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md setup.py
