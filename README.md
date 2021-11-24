@@ -43,6 +43,20 @@ sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc "${NEW_PROJECT_N
 sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md setup.py
 ```
 
+### Adjust GitHub Username
+
+If your username is not ```ptrstn``` then you can first setup a new variable:
+
+```bash
+YOUR_GH_USERNAME=<YOUR_GITHUB_USERNAME>
+```
+
+Then you can replace it with the following command:
+
+```bash
+sed -i "s/ptrstn/$YOUR_GH_USERNAME/g" setup.py README.md
+```
+
 ### Adjust license
 
 Replace the LICENSE file and change the ```license=Unlicense``` entry in ```setup.py``` to whatever you want to use. 
