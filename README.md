@@ -26,12 +26,13 @@ rm -rf tmp
 
 ### Adjust package name
 
-Replace all occurrences of ```packagename``` with your package name.
+Replace all occurrences of ```packagename``` and ```python-starter``` with your package name.
 
 ```bash
 NEW_PROJECT_NAME=<YOUR_PACKAGE_NAME>
 mv packagename $NEW_PROJECT_NAME
 sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py .travis.yml
+sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md setup.py
 ```
 
 ### Adjust license
@@ -47,11 +48,7 @@ Also replace the author name in ```setup.py``` with your name.
 
 Adapt README.md, especially the installation instructions, according to your project. 
 
-In particular, change the following entries:
-
-- GitHub url
-- Travis CI badge url
-- codecov badge url
+In particular, delete all the text up until **## Installation**
 
 ## Installation
 
