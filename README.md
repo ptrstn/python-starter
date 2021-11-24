@@ -19,6 +19,7 @@ Copy all files from this repository into your personal project.
 git clone https://github.com/ptrstn/python-starter.git tmp
 rm -rf tmp/.git
 cp -r tmp/.coveragerc tmp/.gitignore tmp/.travis.yml tmp/* .
+cp -r tmp/.github .github
 rm -rf tmp
 ```
 
