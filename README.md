@@ -1,5 +1,4 @@
 [![Actions Status](https://github.com/ptrstn/python-starter/workflows/Python%20package/badge.svg)](https://github.com/ptrstn/python-starter/actions)
-[![Build Status](https://travis-ci.com/ptrstn/python-starter.svg?branch=master)](https://travis-ci.com/ptrstn/python-starter)
 [![codecov](https://codecov.io/gh/ptrstn/python-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/ptrstn/python-starter)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
@@ -18,7 +17,7 @@ Copy all files from this repository into your personal project.
 ```bash
 git clone https://github.com/ptrstn/python-starter.git tmp
 rm -rf tmp/.git
-cp -r tmp/.coveragerc tmp/.gitignore tmp/.travis.yml tmp/* .
+cp -r tmp/.coveragerc tmp/.flake8 tmp/.gitignore tmp/* .
 cp -r tmp/.github .github
 rm -rf tmp
 ```
@@ -39,7 +38,7 @@ You can then use this variable to rename all occurrences in the template with yo
 
 ```bash
 mv packagename $NEW_PROJECT_NAME
-sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py .travis.yml
+sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py
 sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md setup.py
 ```
 
