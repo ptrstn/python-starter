@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/ptrstn/python-starter/workflows/Python%20package/badge.svg)](https://github.com/ptrstn/python-starter/actions)
+[![Python Package](https://github.com/ptrstn/python-starter/actions/workflows/python-package.yml/badge.svg)](https://github.com/ptrstn/python-starter/actions/workflows/python-package.yml)
 [![codecov](https://codecov.io/gh/ptrstn/python-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/ptrstn/python-starter)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
