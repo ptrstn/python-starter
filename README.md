@@ -38,7 +38,7 @@ You can then use this variable to rename all occurrences in the template with yo
 
 ```bash
 mv packagename $NEW_PROJECT_NAME
-sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py
+sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc README.md "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py
 sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md setup.py
 ```
 
