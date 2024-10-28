@@ -124,8 +124,8 @@ packagename
 ```bash
 git clone https://github.com/ptrstn/python-starter
 cd python-starter
-python -m venv venv
-. venv/bin/activate
+python -m venv .venv
+. .venv/bin/activate
 pip install -e .[test]
 ```
 
