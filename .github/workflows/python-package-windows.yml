@@ -30,3 +30,6 @@ jobs:
       - name: Test with pytest
         run: |
           pytest --cov --cov-fail-under=50 --cov-report=xml --cov-report=term
+      - name: Run command line script
+        run: |
+          packagename
