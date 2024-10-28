@@ -32,14 +32,17 @@ You can do this for instance by first declaring a variable ```NEW_PROJECT_NAME``
 
 ```bash
 NEW_PACKAGE_NAME=<YOUR_PACKAGE_NAME>
-NEW_PROJECT_NAME=<YOUR_PROJECT_NAME>
+```
+
+```bash
+NEW_PROJECT_NAME=<YOUR_PACKAGE_NAME>
 ```
 
 You can then use this variable to rename all occurrences in the template with your desired package/project name.
 
 ```bash
-mv src/packagename src/NEW_PACKAGE_NAME
-sed -i "s/packagename/NEW_PACKAGE_NAME/g" pyproject.toml .coveragerc README.md "src/${NEW_PACKAGE_NAME}/__main__.py" tests/test_core.py
+mv src/packagename src/$NEW_PACKAGE_NAME
+sed -i "s/packagename/$NEW_PACKAGE_NAME/g" pyproject.toml .coveragerc README.md "src/${NEW_PACKAGE_NAME}/__main__.py" tests/test_core.py
 sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md pyproject.toml
 ```
 
@@ -70,7 +73,11 @@ Also replace the author name in ```pyproject.toml``` with your name.
 
 Adapt README.md, especially the installation instructions, according to your project. 
 
-In particular, delete all the text up until **## Installation**
+In particular, delete all the text up until **## Installation**c
+
+```bash
+sed -i '6,/## Installation/d' README.md
+```
 
 ## Installation
 
