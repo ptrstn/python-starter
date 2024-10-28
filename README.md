@@ -31,14 +31,15 @@ Replace all occurrences of ```packagename``` and ```python-starter``` with your 
 You can do this for instance by first declaring a variable ```NEW_PROJECT_NAME``` and replacing ```<YOUR_PACKAGE_NAME>``` with your desired package/project name.
 
 ```bash
-NEW_PROJECT_NAME=<YOUR_PACKAGE_NAME>
+NEW_PACKAGE_NAME=<YOUR_PACKAGE_NAME>
+NEW_PROJECT_NAME=<YOUR_PROJECT_NAME>
 ```
 
 You can then use this variable to rename all occurrences in the template with your desired package/project name.
 
 ```bash
-mv src/packagename src/$NEW_PROJECT_NAME
-sed -i "s/packagename/$NEW_PROJECT_NAME/g" pyproject.toml .coveragerc README.md "src/${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py
+mv src/packagename src/NEW_PACKAGE_NAME
+sed -i "s/packagename/NEW_PACKAGE_NAME/g" pyproject.toml .coveragerc README.md "src/${NEW_PACKAGE_NAME}/__main__.py" tests/test_core.py
 sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md pyproject.toml
 ```
 
@@ -53,17 +54,17 @@ YOUR_GH_USERNAME=<YOUR_GITHUB_USERNAME>
 Then you can replace it with the following command:
 
 ```bash
-sed -i "s/ptrstn/$YOUR_GH_USERNAME/g" setup.py README.md
+sed -i "s/ptrstn/$YOUR_GH_USERNAME/g" pyproject.toml README.md
 ```
 
 ### Adjust license
 
-Replace the LICENSE file and change the ```license=Unlicense``` entry in ```setup.py``` to whatever you want to use. 
+Replace the LICENSE file to whatever you want to use. 
 I would suggest the MIT license.
 
 ### Adjust author 
 
-Also replace the author name in ```setup.py``` with your name.
+Also replace the author name in ```pyproject.toml``` with your name.
 
 ### Adjust README.md
 
@@ -90,8 +91,7 @@ git clone https://github.com/ptrstn/python-starter
 cd python-starter
 python -m venv venv
 . venv/bin/activate
-pip install -e .
-pip install -r testing-requirements.txt
+pip install -e .[test]
 ```
 
 ### Testing
