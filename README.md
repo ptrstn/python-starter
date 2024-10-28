@@ -31,7 +31,7 @@ mv src/packagename src/$NEW_PACKAGE_NAME
 sed -i "s/packagename/$NEW_PACKAGE_NAME/g" pyproject.toml .coveragerc README.md "src/${NEW_PACKAGE_NAME}/__main__.py" tests/test_core.py
 sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md pyproject.toml
 sed -i "s/ptrstn/$YOUR_GH_USERNAME/g" pyproject.toml README.md
-sed -i '6,/## Installation/d' README.md
+sed -i '6,/^## Installation/d' README.md
 echo -e '\033[0;32mDone!\033[0m'
 echo -e 'Note: Don'"'"'t forget to update your preferred \033[0;34mLICENSE\033[0m'
 ```
@@ -104,7 +104,7 @@ Adapt README.md, especially the installation instructions, according to your pro
 In particular, delete all the text up until **## Installation**c
 
 ```bash
-sed -i '6,/## Installation/d' README.md
+sed -i '6,/^## Installation/d' README.md
 ```
 
 ## Installation
