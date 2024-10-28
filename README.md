@@ -8,6 +8,34 @@ My personal python starter template. Intended for copy and paste use.
 
 This project is released into the public domain, so feel free to modify and use it as you wish.
 
+## tl;dr
+
+If you don't want to walk through the [Usage chapter](#usage) manually, just run this code block:
+
+```bash
+read -p "Enter the package name: " NEW_PACKAGE_NAME
+read -p "Enter the project name [default: $NEW_PACKAGE_NAME]: " NEW_PROJECT_NAME
+NEW_PROJECT_NAME=${NEW_PROJECT_NAME:-$NEW_PACKAGE_NAME}
+read -p "Enter your GitHub username [default: ptrstn]: " YOUR_GH_USERNAME
+YOUR_GH_USERNAME=${YOUR_GH_USERNAME:-ptrstn}
+echo -e "\033[0;34mPackage name: $NEW_PACKAGE_NAME\033[0m"
+echo -e "\033[0;34mProject name: $NEW_PROJECT_NAME\033[0m"
+echo -e "\033[0;34mGitHub username: $YOUR_GH_USERNAME\033[0m"
+echo -e "\033[0;34mCloning https://github.com/ptrstn/python-starter.git...\033[0m"
+git clone https://github.com/ptrstn/python-starter.git tmp
+rm -rf tmp/.git
+cp -r tmp/.coveragerc tmp/.flake8 tmp/.gitignore tmp/* .
+cp -r tmp/.github .github
+rm -rf tmp
+mv src/packagename src/$NEW_PACKAGE_NAME
+sed -i "s/packagename/$NEW_PACKAGE_NAME/g" pyproject.toml .coveragerc README.md "src/${NEW_PACKAGE_NAME}/__main__.py" tests/test_core.py
+sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md pyproject.toml
+sed -i "s/ptrstn/$YOUR_GH_USERNAME/g" pyproject.toml README.md
+sed -i '6,/## Installation/d' README.md
+echo -e '\033[0;32mDone!\033[0m'
+echo -e 'Note: Don'"'"'t forget to update your preferred \033[0;34mLICENSE\033[0m'
+```
+
 ## Usage
 
 ### Copy files into your new project
