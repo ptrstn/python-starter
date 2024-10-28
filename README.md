@@ -37,9 +37,9 @@ NEW_PROJECT_NAME=<YOUR_PACKAGE_NAME>
 You can then use this variable to rename all occurrences in the template with your desired package/project name.
 
 ```bash
-mv packagename $NEW_PROJECT_NAME
-sed -i "s/packagename/$NEW_PROJECT_NAME/g" setup.py .coveragerc README.md "${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py
-sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md setup.py
+mv src/packagename src/$NEW_PROJECT_NAME
+sed -i "s/packagename/$NEW_PROJECT_NAME/g" pyproject.toml .coveragerc README.md "src/${NEW_PROJECT_NAME}/__main__.py" tests/test_core.py
+sed -i "s/python-starter/$NEW_PROJECT_NAME/g" README.md pyproject.toml
 ```
 
 ### Adjust GitHub Username
