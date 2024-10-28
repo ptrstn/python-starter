@@ -22,7 +22,6 @@ test = [
     "pytest-dotenv",
 ]
 
-
 [project.scripts]
 packagename = "packagename.__main__:main"
 
@@ -31,4 +30,3 @@ omit = ["tests/*"]
 
 [tool.coverage.report]
 show_missing = true
-
